@@ -11,7 +11,10 @@ const Route=require('./router/authRoute')
 
 database()
 
-app.use('/',Route)
+app.use('/api/v1/auth',Route)
+app.get('/',(req,res)=>{
+    res.send("You are on home page")
+})
 
 const PORT = process.env.PORT || 8001
 
